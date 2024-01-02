@@ -2,4 +2,4 @@
 
 number = 98
 
-"%s Battery street\n" % number
+"%s Battery street" % number
