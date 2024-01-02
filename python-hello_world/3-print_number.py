@@ -2,4 +2,5 @@
 
 number = 98
 
-"%s Battery street" % number
+formatted_string = "%s Battery street" % number
+print(formatted_string)
