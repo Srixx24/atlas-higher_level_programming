@@ -1,3 +1,5 @@
 #!/usr/bin/python3
+
 number = 98
-"%s Battery street\n" %name
+
+"%s Battery street\n" % number
