@@ -2,4 +2,4 @@
 
 number = 3.14159
 
-f"Float: {Float: .2f}"
+f"Float: {number:.2f}"
