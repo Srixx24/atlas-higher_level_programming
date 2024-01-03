@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 def uppercase(str):
+    uppers = ""
     for char in str:
-        print(char(ord) & 32), end='')
-    print()
+        uppers += "{}".format(chr(ord(char) & ~32))
+    print(uppers)
