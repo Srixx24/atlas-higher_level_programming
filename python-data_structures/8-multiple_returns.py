@@ -7,4 +7,4 @@ def multiple_returns(sentence):
         lenofsen = len(sentence)
     else:
         lenofsen = 0
-    return (lenofsen, if not sentence sentence else sentence[:1])
+    return (lenofsen, sentence if not sentence else sentence[:1])
