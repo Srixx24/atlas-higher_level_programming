@@ -8,4 +8,3 @@
     b = 2
 
     print("{} + {} = {}".format(a + b, add(a, b)))
-    print()
