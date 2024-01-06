@@ -2,7 +2,7 @@
 
 def multiple_returns(sentence):
     if not sentence:
-        sentece = None
+        sentence = None
     if sentence:
         lenofsen = len(sentence)
     else:
