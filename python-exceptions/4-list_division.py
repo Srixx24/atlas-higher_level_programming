@@ -10,7 +10,7 @@ def list_division(my_list_1, my_list_2, list_length):
             element_2 = my_list_2[i]
             if isinstance(element_1, (int, float)) and isinstance(element_2, (int, float)):
                 try:
-                    div = my_list_1[i] / my_list_2[i]
+                    div = element_1 / element_2
                 except ZeroDivisionError:
                     print("division by 0")
                     div = 0
