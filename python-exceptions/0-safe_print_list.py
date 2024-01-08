@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-def safe_print_integer(value):
+def safe_print_list(my_list=[], x=0):
 
     try:
-        print("{:d}".format(value))
-        return value
+        print
+        return True
     except:
-        return false
+        return False
