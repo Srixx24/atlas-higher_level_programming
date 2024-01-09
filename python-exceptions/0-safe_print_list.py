@@ -11,4 +11,5 @@ def safe_print_list(my_list=[], x=0):
             pass
     except TypeError:
         pass
+    print()
     return count
