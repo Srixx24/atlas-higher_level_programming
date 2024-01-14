@@ -25,7 +25,7 @@ class Square:
         """Getting size"""
         return self.__size
 
-    @property.setter
+    @size.setter
     def size(self, value):
         """set to size"""
         if not isinstance(value, int):
@@ -38,3 +38,10 @@ class Square:
         """return area"""
         return self.__size ** 2
 
+    def my_print(self):
+        """Print square with #"""
+        if self.__size == 0:
+            print()
+        else:
+            for _ in range(self.__size):
+                print("#" * self.__size)
