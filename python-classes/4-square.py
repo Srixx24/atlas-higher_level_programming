@@ -17,6 +17,9 @@ class Square:
 
         Args:
             size (int, optional): size of square, 0
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
         """
         self.size = size
 
@@ -26,7 +29,7 @@ class Square:
         Getter method for size
         """
         return self.__size
-    @property.setter
+    @size.setter
     def size(self, value):
         """
         Setter method to set size
