@@ -28,6 +28,8 @@ class Square:
         """
         Setter method to set size
 
+        Parameter:
+            value (int): size
         Raises:
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
@@ -42,7 +44,7 @@ class Square:
         """
         Returns area
 
-        return:
+        Return:
             int: area
         """
         return self.__size ** 2
