@@ -5,7 +5,9 @@ Defines a class square
 
 """
 
+
 class Square:
+
     """
     Class Square
 
@@ -15,7 +17,7 @@ class Square:
     def _init_(self, side_len):
         """
         Starts new instance of square class
-        
+
         Args:
             side_len (float): The length of the square's side.
         """
