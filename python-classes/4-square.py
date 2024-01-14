@@ -23,13 +23,13 @@ class Square:
     @property
     def size(self):
         """
-        getting size
+        Getter method for size
         """
         return self.__size
     @property.setter
     def size(self, value):
         """
-        Set to size
+        Setter method to set size
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -39,6 +39,6 @@ class Square:
 
     def area(self):
         """
-        Return area
+        Returns area
         """
         return self.__size ** 2
