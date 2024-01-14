@@ -3,6 +3,7 @@
 Class square that defines a square based on 0-square.py
 """
 
+
 class Square:
     """
     A class representing a square
@@ -14,4 +15,4 @@ class Square:
         Args:
             size (int): size of square
         """
-        self._size = size
+        self.__size = size
