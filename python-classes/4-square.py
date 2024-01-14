@@ -14,7 +14,7 @@ class Square:
 
         Args:
             size (int, optional): size of square, 0
-                raises:
+        Raises:
                 TypeError: If size is not an integer.
                 ValueError: If size is less than 0.
         """
