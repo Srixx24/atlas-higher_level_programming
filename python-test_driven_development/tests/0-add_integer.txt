@@ -25,5 +25,21 @@ class TestAddInteger(unittest.TestCase):
 	result = add_integer(5.5, 2.3)
 	self.assertEqual(result, 7)
 
+	# Test case 6: Adding two floats resulting in float overflow
+	result = add_integer(1e100, 1e100)
+	self.assertEqual(result, float('inf'))
+
+	# Test case 7: Adding a float NaN to an integer
+	with self.assertRaises(TypeError):
+		add_integer(float('nan'), 5)
+
+	# Test case 8: Missing one argument
+	with self.assertRaises(TypeError):
+		add_integer(5)
+
+	# Test case 9: Missing two arguments
+	with self.assertRaises(TypeError):
+		add_integer()
+
 if __name__ == "__main__":
 	unittest.main()
