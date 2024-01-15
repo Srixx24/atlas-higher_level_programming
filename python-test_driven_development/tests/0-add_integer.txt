@@ -1,45 +1,43 @@
-import unittest
-
-from add_integer import add_integer
-
-class TestAddInteger(unittest.TestCase):
-	def test_add_integer(self):
-
-	# Test case 1: Adding two integers
-	result = add_integer(10, 2)
-	self.assertEqual(result, 12)
-
-	# Test case 2: Adding a negative integer and a positive integer
-	result = add_integer(-5, 5)
-	self.assertEqual(result, 0)
-
-	# Test case 3: Adding two negative integers
-	result = add_integer(-5, -2)
-	self.assertEqual(result, -7)
-
-	# Test case 4: Adding an integer and a float
-	result = add_integer(4, 5.5)
-	self.assertEqual(result, 9)
-
-	# Test case 5: Adding two floats
-	result = add_integer(5.5, 2.3)
-	self.assertEqual(result, 7)
-
-	# Test case 6: Adding two floats resulting in float overflow
-	result = add_integer(1e100, 1e100)
-	self.assertEqual(result, float('inf'))
-
-	# Test case 7: Adding a float NaN to an integer
-	with self.assertRaises(TypeError):
-		add_integer(float('nan'), 5)
-
-	# Test case 8: Missing one argument
-	with self.assertRaises(TypeError):
-		add_integer(5)
-
-	# Test case 9: Missing two arguments
-	with self.assertRaises(TypeError):
-		add_integer()
-
-if __name__ == "__main__":
-	unittest.main()
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer()
+Traceback (most recent call last):
+  ...
+TypeError: add_integer() missing 1 required argument: 'a'
+>>> add_integer(5, 10)
+15
+>>> add_integer(5.5, 5)
+10
+>>> add_integer(0.5, 5.5)
+5
+>>> add_integer('x')
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer
+>>> add_integer(float("inf"))
+Traceback (most recent call last):
+  ...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float("-inf"))
+Traceback (most recent call last):
+  ...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float("NaN"))
+Traceback (most recent call last):
+  ...
+ValueError: cannot convert float NaN to integer
+>>> add_integer(0, 'x')
+Traceback (most recent call last):
+  ...
+TypeError: b must be an integer
+>>> add_integer(0, float("inf"))
+Traceback (most recent call last):
+  ...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(0, float("-inf"))
+Traceback (most recent call last):
+  ...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(0, float("NaN"))
+Traceback (most recent call last):
+  ...
+ValueError: cannot convert float NaN to integer
