@@ -32,3 +32,13 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer('ABC'), 'C')
         self.assertEqual(max_integer([[], [0], [0, 0]]), [0, 0])
         self.assertRaises(TypeError, max_integer, [0, []])
+
+    def test_MaximumInMiddle(self):
+        """Test with the maximum value in the middle of the list"""
+        self.assertEqual(max_integer([-1, 5, 2, 50, 3]), 50)
+        self.assertEqual(max_integer([-10, -5, 0, 50, -1]), 50)
+
+    def test_MaximumAtBeginning(self):
+        """Test with the maximum value at the beginning of the list"""
+        self.assertEqual(max_integer([50, -1, 5, 2, 3]), 50)
+        self.assertEqual(max_integer([50, -10, -5, 0, -1]), 50)
