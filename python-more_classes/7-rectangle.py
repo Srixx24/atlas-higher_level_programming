@@ -71,7 +71,6 @@ class Rectangle:
         """Returns string representing rectangle"""
         return "Rectangle({}, {})".format(self.width, self.height)
 
-
     def __del__(self):
         """Prints messege when instance of Rectangle is deleted"""
         type(self).number_of_instances -= 1
