@@ -60,10 +60,10 @@ class Rectangle:
     def __str__(self):
         """Returns string representing rectangle with #"""
         if self.width == 0 or self.height == 0:
-            return ()
-        rectangle_str = ()
+            return ""
+        rectangle_str = ""
         for _ in range(self.height):
-            rectangle_str += '#' * self.width + "/n"
+            rectangle_str += "#" * self.width + "/n"
         return rectangle_str[:-1]
     def __repr__(self):
         """Returns string representing rectangle"""
