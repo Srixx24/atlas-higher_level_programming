@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Class Rectangle that defines a rectangle based on 6-rectangle.py
+Class Rectangle that defines a rectangle based on 7-rectangle.py
 """
 
 
