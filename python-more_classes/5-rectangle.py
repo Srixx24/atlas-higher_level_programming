@@ -44,30 +44,30 @@ class Rectangle:
         """Setting height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-	if value < 0:
-	    raise ValueError("height must be >= 0")
+        if value < 0:
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
-	"""Returning area (width * height)"""
-	return self.width * self.height
+        """Returning area (width * height)"""
+        return self.width * self.height
 
     def perimeter(self):
-	"""Returning perimeter"""
-	if self.width == 0 or self.height == 0:
-	    return 0
-	return 2 * (self.width + self.height)
+        """Returning perimeter"""
+        if self.width == 0 or self.height == 0:
+            return 0
+        return 2 * (self.width + self.height)
 
     def __str__(self):
-	"""Returns string representing rectangle with #"""
-	if self.width == 0 or self.height == 0:
-	    return ""
-	lines = ['#' * self.width for _ in range(self.height)]
-	return '\n'.join(lines)
+        """Returns string representing rectangle with #"""
+        if self.width == 0 or self.height == 0:
+            return ""
+        lines = ['#' * self.width for _ in range(self.height)]
+        return '\n'.join(lines)
 
     def __repr__(self):
-	"""Returns string representing rectangle"""
-	return "Rectangle({}, {})".format(self.width, self.height)
+        """Returns string representing rectangle"""
+        return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
         """
