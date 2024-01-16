@@ -75,3 +75,4 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
 
     print(Rectangle.number_of_instances)
+    """prints number of instances"""
