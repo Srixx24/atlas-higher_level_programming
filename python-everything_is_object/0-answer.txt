@@ -1,1 +1,1 @@
-print object
+printobject
