@@ -1,6 +1,4 @@
-First import ``BaseGeometry`` from the ``7-base_geometry`` module:
-
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Class should define 2 functions
 
@@ -17,15 +15,14 @@ Class should define 2 functions
     True
 
 Test ``area``
--------------
-     >>> try:
+    >>> try:
     ...     bg.area()
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [Exception] area() is not implemented
 
 Test ``integer_validator``
---------------------------
+
 Integer takes in 2 arguments
 
     >>> bg.integer_validator()
@@ -50,3 +47,4 @@ Test for type
     ...
 
     tests = [True, 1.24, -76.87, set(), [1, 2], "a string", {"a":1}, ("11", 3), test_i, bg, BaseGeometry, None]
+    >>> test_i(tests)
