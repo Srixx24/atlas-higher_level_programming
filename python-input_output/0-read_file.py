@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Function to read and print a file"""
+"""
+Function to read and print a file
+"""
 
 
 def read_file(filename=""):
@@ -10,5 +12,5 @@ def read_file(filename=""):
         filename: (str) Name of file to be read
 
     """
-    with open(filename, "r") as istream:
-        print (istream.read(), end="")
+    with open(filename, encoding="utf-8") as myFile:
+        print ("{}".format(myFile.read()), end="")
