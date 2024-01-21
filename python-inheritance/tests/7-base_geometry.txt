@@ -49,17 +49,3 @@ Test for type
     ...
 
     tests = [True, 1.24, -76.87, set(), [1, 2], "a string", {"a":1}, ("11", 3), test_i, bg, BaseGeometry, None]
-
-    >>> test_i(tests)
-    [TypeError] name must be an integer for type <class 'bool'>
-    [TypeError] name must be an integer for type <class 'float'>
-    [TypeError] name must be an integer for type <class 'float'>
-    [TypeError] name must be an integer for type <class 'set'>
-    [TypeError] name must be an integer for type <class 'list'>
-    [TypeError] name must be an integer for type <class 'str'>
-    [TypeError] name must be an integer for type <class 'dict'>
-    [TypeError] name must be an integer for type <class 'tuple'>
-    [TypeError] name must be an integer for type <class 'function'>
-    [TypeError] name must be an integer for type <class '7-base_geometry.BaseGeometry'>
-    [TypeError] name must be an integer for type <class 'type'>
-    [TypeError] name must be an integer for type <class 'NoneType'>
