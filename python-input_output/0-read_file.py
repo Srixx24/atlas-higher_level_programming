@@ -3,6 +3,12 @@
 
 
 def read_file(filename=""):
-    """Print file contents"""
+    """
+    Print file contents
+    
+    Args:
+        filename: (str) Name of file to be read
+
+    """
     with open(filename, "r") as istream:
         print (istream.read(), end="")
