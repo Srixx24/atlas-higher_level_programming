@@ -46,19 +46,24 @@ check `print_sorted()` returns a new list
     >>> l1.append(1)
     >>> l1.append(3)
     >>> l1.append(2)
+    >>> sorted_list = l1.print_sorted()
     >>> l1.print_sorted()
+    >>> print(sorted_list)
     [1, 2, 3]
-    >>> l1
+    >>> print(l1)
     [1, 3, 2]
 
+    >>> sorted_list = l1.print_sorted()
     >>> l1.print_sorted()
+    >>> print(sorted_list)
     []
 
+    >>> l2 = [3, 7, 0, 1, 6]
     >>> l3 = MyList(l2)
     >>> print(l3)
-    [3, 7, 0, 1, 6]
 
-    >>> l3.print_sorted()
+    >>> sorted_list = l3.print_sorted()
+    >>> print(sorted_list)
     [0, 1, 3, 6, 7]
 
     >>> print(l3)
@@ -66,7 +71,8 @@ check `print_sorted()` returns a new list
 
 check `print_sorted()` with empty list
     >>> l1 = MyList()
-    >>> l1.print_sorted()
+    >>> sorted_list = l1.print_sorted()
+    >>> print(sorted_list)
     []
 
 
