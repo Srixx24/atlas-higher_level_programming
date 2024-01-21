@@ -48,7 +48,8 @@ Test for type
     ...            print("[{}] {} for type {}".format(e.__class__.__name__, e, type(test)))
     ...
 
-    >>> tests = [True, 1.24, -76.87, set(), [1, 2], "a string", {"a":1}, ("11", 3), test_i, bg, BaseGeometry, None]
+    tests = [True, 1.24, -76.87, set(), [1, 2], "a string", {"a":1}, ("11", 3), test_i, bg, BaseGeometry, None]
+
     >>> test_i(tests)
     [TypeError] name must be an integer for type <class 'bool'>
     [TypeError] name must be an integer for type <class 'float'>
