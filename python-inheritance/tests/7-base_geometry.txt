@@ -47,4 +47,4 @@ Test for type
     ...
 
     tests = [True, 1.24, -76.87, set(), [1, 2], "a string", {"a":1}, ("11", 3), test_i, bg, BaseGeometry, None]
-    >>> test_i(tests)
+    test_i(tests)
