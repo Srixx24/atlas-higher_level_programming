@@ -5,4 +5,4 @@
 def read_file(filename=""):
     """Print file contents"""
     with open(filename,"r") as istream:
-        print (istream.read(), end ="")
+        print (istream.read(), end="")
