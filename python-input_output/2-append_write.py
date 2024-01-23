@@ -7,5 +7,7 @@ Function that appends a string at the end of a text file
 
 def append_write(filename="", text=""):
     """
-
+    Appends a text string
     """
+    with open(filename, "a") as ostream:
+        return ostream.write (text)
