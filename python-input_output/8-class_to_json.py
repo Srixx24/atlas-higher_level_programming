@@ -8,4 +8,4 @@ def class_to_json(obj):
     """
     Serialize the writable attributes of an object
     """
-    return obj._dict_
+    return obj.__dict__
