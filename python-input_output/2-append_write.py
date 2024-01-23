@@ -10,4 +10,4 @@ def append_write(filename="", text=""):
     Appends a text string
     """
     with open(filename, "a") as ostream:
-        return ostream.write (text)
+        return ostream.write(text)
