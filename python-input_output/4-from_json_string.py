@@ -6,6 +6,6 @@ Function that returns an object represented by a JSON string
 
 def from_json_string(my_str):
     """
-
+    Create an object from a JSON
     """
-
+    return json.loads(my_str)
