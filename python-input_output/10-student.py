@@ -25,5 +25,5 @@ class Student:
         """
         Retrieves a representation of a Student
         """
-        if attrs is none:
+        if attrs is None:
             return self.__dict__
