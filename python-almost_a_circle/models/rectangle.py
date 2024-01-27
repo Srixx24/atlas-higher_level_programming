@@ -9,16 +9,16 @@ class Rectangle(Base):
     """
     Class Rectangle
     """
-    def __init__(self, id, width, height, x, y):
+    def __init__(self, width, height, x=0, y=0, id):
         """
         Start of instance for class Rectangle
         """
         super().__init__(id)
-        self.id = id
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        self.id = id
 
     def update(self, *args):
         """Attribute updates"""
