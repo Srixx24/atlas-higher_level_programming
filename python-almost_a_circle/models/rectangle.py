@@ -44,7 +44,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("Height must be an integer")
          if value <= 0:
-             raise ValueError("Height must be > 0")
+            raise ValueError("Height must be > 0")
         self.__height = value
 
     @property
