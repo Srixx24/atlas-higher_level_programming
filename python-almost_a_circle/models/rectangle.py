@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-class Rectangle that inherits from Base
+Class Rectangle that inherits from Base
 """
 from models.base import Base
 
@@ -27,7 +27,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Setting width"""
-        self.__Width = value
+        self.__width = value
 
     @property
     def height(self):
