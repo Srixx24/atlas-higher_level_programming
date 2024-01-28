@@ -13,3 +13,10 @@ class Square(Rectangle):
         """
         Start of instance of class Square
         """
+        super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        """
+        Start of instance for square
+        """
+        return f"[square] ({self.id}) {self.x}/{self.y} - {self.width}"
