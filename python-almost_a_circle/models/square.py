@@ -19,4 +19,4 @@ class Square(Rectangle):
         """
         Start of instance for square
         """
-        return f"[square] ({self.id}) {self.x}/{self.y} - {self.width}"
+        return "OK"
