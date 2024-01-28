@@ -2,6 +2,7 @@
 """
 Class Base used as base for all other classes in this project.
 """
+import json
 
 
 class Base:
