@@ -27,6 +27,23 @@ class Rectangle(Base):
             f"{self.width}/{self.height}"
         )
 
+    def update(self, *args, **kwargs):
+        """Attribute updates"""
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
+        else:
+             for key, value in kwargs.items():
+                setattr(self, key, value)
+
     @property
     def width(self):
         """Getting width"""
@@ -91,3 +108,12 @@ class Rectangle(Base):
         """Prints the Rectangle to output"""
         print("\n" * self.__y, end="")
         print("\n".join([" " * self.__x + "#" * self.__width] * self.__height))
+
+    def to_dictionary(self):
+        """Dictionary representation of a Rectangle"""
+        return {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+            }
