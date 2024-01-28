@@ -27,3 +27,13 @@ class Base:
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    def save_to_file(cls, list_objs):
+        """Writes the JSON string representation"""
+        with open("{}.json".format(cls.__name__), 'w') as ofile:
+            if list_objs:
+                ofile.write(cls.to_json_string(
+                    [obj.to_dictionary() for obj in list_objs]
+                ))
+            else:
+                ofile.write("[]")
