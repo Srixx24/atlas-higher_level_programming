@@ -50,7 +50,7 @@ class Base:
     def create(cls, **dictionary):
         """Returns an instance with all attributes set"""
         args = []
-        while true:
+        while True:
             try:
                 dummy = cls(*args)
                 break
