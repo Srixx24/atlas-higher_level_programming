@@ -53,6 +53,5 @@ class Base:
         while True:
             try:
                 dummy = cls(*args)
-            break
         dummy.update(**dictionary)
         return dummy
