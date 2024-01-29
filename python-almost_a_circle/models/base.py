@@ -41,7 +41,7 @@ class Base:
         filename = "{}.json".format(cls.__name__)
         try:
             with open(filename, "r") as file:
-                json_string = file.read
+                json_string = file.read()
                 dict_list = cls.from_json_string(json_string)
                 inst_list = [cls.create(**dictionary) for dictionary in dict_list]
                 return inst_list
