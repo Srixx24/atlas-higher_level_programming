@@ -36,6 +36,17 @@ class Base:
         return json.loads(json_string)
 
     @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+        filename = "{}.json".format(cls.__name__)
+        try:
+            with open(filename, "r") as file:
+                json_string = file.read
+                dict_list = cls.from_json_string(json_string)
+                inst_list = [cls.create(**dictionary) for dictionary in dict_list]
+                return inst_list
+
+    @classmethod
     def save_to_file(cls, list_objs):
         """Writes the JSON string representation"""
         with open("{}.json".format(cls.__name__), 'w') as ofile:
