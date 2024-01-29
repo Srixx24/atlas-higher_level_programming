@@ -43,7 +43,7 @@ class Base:
             with open(filename, "r") as file:
                 json_string = file.read()
                 dict_list = cls.from_json_string(json_string)
-                inst_list = [cls.create(**dictionary) for dictionary in dict_list]
+                inst_list = [cls.create(**dicti) for dicti in dict_list]
                 return inst_list
         except FileNotFoundError:
             return []
