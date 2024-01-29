@@ -46,7 +46,7 @@ class Base:
                 inst_list = [cls.create(**dictionary) for dictionary in dict_list]
                 return inst_list
             except:
-                return()
+                return []
 
     @classmethod
     def save_to_file(cls, list_objs):
