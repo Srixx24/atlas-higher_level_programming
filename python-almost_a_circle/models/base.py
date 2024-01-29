@@ -45,7 +45,7 @@ class Base:
                 dict_list = cls.from_json_string(json_string)
                 inst_list = [cls.create(**dictionary) for dictionary in dict_list]
                 return inst_list
-            except:
+            except FileNotFoundError:
                 return []
 
     @classmethod
