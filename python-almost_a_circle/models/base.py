@@ -45,6 +45,8 @@ class Base:
                 dict_list = cls.from_json_string(json_string)
                 inst_list = [cls.create(**dictionary) for dictionary in dict_list]
                 return inst_list
+            except:
+                return()
 
     @classmethod
     def save_to_file(cls, list_objs):
