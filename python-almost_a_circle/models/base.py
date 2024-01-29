@@ -53,5 +53,8 @@ class Base:
         while True:
             try:
                 dummy = cls(*args)
+                break
+            except TypeError:
+                args.append(1)
         dummy.update(**dictionary)
         return dummy
