@@ -45,3 +45,14 @@ class Base:
                 ))
             else:
                 ofile.write("[]")
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes set"""
+        args = []
+        while true:
+            try:
+                dummy = cls(*args)
+                break
+        dummy.update(**dictionary)
+        return dummy
