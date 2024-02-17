@@ -42,3 +42,5 @@ class TestMaxInteger(unittest.TestCase):
         """Test with the maximum value at the beginning of the list"""
         self.assertEqual(max_integer([50, -1, 5, 2, 3]), 50)
         self.assertEqual(max_integer([50, -10, -5, 0, -1]), 50)
+
+
