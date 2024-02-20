@@ -5,14 +5,15 @@ Lists all states from the database hbtn_0e_0_usa
 import MySQLdb
 import sys
 
+
 def list_states(username, password, database):
 
     try:
-        db = MySQLdb.connect(host="localhost", 
-                user=username,
-                port=3306,
-                passwd=password,
-                db=database)
+        db = MySQLdb.connect(host="localhost",
+                            user=username,
+                            port=3306,
+                            passwd=password,
+                            db=database)
 
         cursor = db.cursor()
 
@@ -28,6 +29,7 @@ def list_states(username, password, database):
     finally:
         if db:
             db.close()
+
 
 if __name__ == '__main__':
     username = sys.argv[1]
