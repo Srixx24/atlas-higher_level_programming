@@ -27,6 +27,7 @@ def list_cities_by_state(username, password, database, state_name):
 
         rows = cursor.fetchall()
 
+        counter = 0
         for row in rows:
             city = row[1]
             state = row[2]
