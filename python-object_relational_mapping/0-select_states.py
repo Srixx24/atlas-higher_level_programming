@@ -20,10 +20,10 @@ def list_states(username, password, database):
             rows = cursor.fetchall()
 
             for row in rows:
-                print (row)
+                print(row)
 
         except MySQLdb.Error as e:
-            print("Error connecting to MySQL: {}" .format(e))
+            print("Error connecting to MySQL: {}".format(e))
         finally:
             if db:
                 db.close()
