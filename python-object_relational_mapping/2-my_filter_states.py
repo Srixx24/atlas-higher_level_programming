@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Displays all values in the states table of hbtn_0e_0_usa where name matches the argument
+Displays all values in the states table of hbtn_0e_0_usa
 """
 import MySQLdb
 import sys
@@ -8,11 +8,13 @@ import sys
 
 def search_states(username, password, database, state_name):
     try:
-        db = MySQLdb.connect(host="localhost",
-                            port=3306,
-                            user=username,
-                            passwd=password,
-                            db=database)
+        db = MySQLdb.connect(
+                host="localhost",
+                port=3306,
+                user=username,
+                passwd=password,
+                db=database
+                )
 
         cursor = db.cursor()
 
