@@ -18,7 +18,10 @@ def list_cities(username, password, database):
 
         cursor = db.cursor()
 
-        command = "SELECT * FROM cities ORDER BY id ASC"
+        command = "SELECT cities.id, cities.name, states.name " \
+                "FROM cities " \
+                "JOIN states ON cities.state_id = states.id " \
+                "ORDER BY cities.id ASC"
         cursor.execute(command)
 
         rows = cursor.fetchall()
