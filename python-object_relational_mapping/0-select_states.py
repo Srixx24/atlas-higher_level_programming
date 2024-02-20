@@ -7,24 +7,31 @@ import sys
 
 def list_states(username, password, database):
 
-    if __name__ == '__main__':
-        try:
-            db = MySQLdb.connect(host="localhost", 
-                    user=username,
-                    passwd=password,
-                    db=database)
+    try:
+        db = MySQLdb.connect(host="localhost", 
+                user=username,
+                port=3306,
+                passwd=password,
+                db=database)
 
-            cursor = db.cursor()
+        cursor = db.cursor()
 
-            cursor.execute("SELECT * FROM states ORDER BY id ASC")
+        cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
-            rows = cursor.fetchall()
+        rows = cursor.fetchall()
 
-            for row in rows:
-                print(row)
+        for row in rows:
+            print(row)
 
-        except MySQLdb.Error as e:
-            print("Error connecting to MySQL: {}".format(e))
-        finally:
-            if db:
-                db.close()
+    except MySQLdb.Error as e:
+        print("Error connecting to MySQL: {}".format(e))
+    finally:
+        if db:
+            db.close()
+
+if __name__ == '__main__':
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+
+    list_states(username, password, database)
