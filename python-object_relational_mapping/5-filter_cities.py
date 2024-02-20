@@ -23,6 +23,7 @@ def list_cities_by_state(username, password, database, state_name):
                 "JOIN states ON cities.state_id = states.id " \
                 "WHERE states.name = %s " \
                 "ORDER BY cities.id ASC"
+                "LIMIT 2"
         cursor.execute(command, (state_name,))
 
         rows = cursor.fetchall()
