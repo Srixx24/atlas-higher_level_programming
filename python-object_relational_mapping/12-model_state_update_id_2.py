@@ -14,7 +14,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for row in session.query(State.id).filter_by(id=2):
+    for row in session.query(State).filter_by(id=2):
         row.name = "New Mexico"
 
     session.commit()
