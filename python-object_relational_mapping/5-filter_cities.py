@@ -29,7 +29,7 @@ def list_cities_by_state(username, password, database, state_name):
 
         for row in rows:
             city = row[1]
-            state = [2]
+            state = row[2]
             print("{}, {}".format(city, state))
 
     except MySQLdb.Error as e:
