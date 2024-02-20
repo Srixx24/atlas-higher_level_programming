@@ -21,7 +21,7 @@ def list_cities_by_state(username, password, database, state_name):
         command = "SELECT cities.id, cities.name, states.name " \
                 "FROM cities " \
                 "JOIN states ON cities.state_id = states.id " \
-                "WHERE states.name = %s " \
+                "WHERE states.name = (SELECT id FROM states WHERE name = %s) " \
                 "ORDER BY cities.id ASC"
         cursor.execute(command, (state_name,))
 
