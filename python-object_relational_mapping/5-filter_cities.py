@@ -28,7 +28,9 @@ def list_cities_by_state(username, password, database, state_name):
         rows = cursor.fetchall()
 
         for row in rows:
-            print(row)
+            city = row[1]
+            state = [2]
+            print("{}, {}".format(city, state))
 
     except MySQLdb.Error as e:
         print("Error connecting to MySQL: {}".format(e))
