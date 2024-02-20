@@ -21,7 +21,7 @@ def list_states(username, password, database, state_name):
         command = "SELECT * FROM states " \
                 "WHERE name=%s " \
                 "ORDER BY id ASC"
-        cursor.execute(command, (state_name))
+        cursor.execute(command, (state_name,))
 
         rows = cursor.fetchall()
 
