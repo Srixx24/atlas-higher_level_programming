@@ -6,7 +6,7 @@ import MySQLdb
 import sys
 
 
-def list_states(username, password, database, state_name):
+def search_states(username, password, database, state_name):
     try:
         db = MySQLdb.connect(host="localhost",
                             port=3306,
