@@ -23,7 +23,6 @@ def list_cities_by_state(username, password, database, state_name):
                 "JOIN states ON cities.state_id = states.id " \
                 "WHERE states.name = %s " \
                 "ORDER BY cities.id ASC"
-                "LIMIT 2"
         cursor.execute(command, (state_name,))
 
         rows = cursor.fetchall()
@@ -32,6 +31,9 @@ def list_cities_by_state(username, password, database, state_name):
             city = row[1]
             state = row[2]
             print("{}, {}".format(city, state))
+            counter += 1
+            if counter == 2:
+                break
 
     except MySQLdb.Error as e:
         print("Error connecting to MySQL: {}".format(e))
