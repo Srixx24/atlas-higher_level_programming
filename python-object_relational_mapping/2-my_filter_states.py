@@ -26,7 +26,7 @@ def list_states(username, password, database):
         for row in rows:
             print(row)
 
-	except MySQLdb.Error as e:
+    except MySQLdb.Error as e:
         print("Error connecting to MySQL: {}".format(e))
 
     finally:
