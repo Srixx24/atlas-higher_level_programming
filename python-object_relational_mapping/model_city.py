@@ -29,7 +29,7 @@ class City(Base):
             nullable=False,
             )
 
-    state_id = Column(
+    states_id = Column(
             Integer,
             ForeignKey("states.id")
             nullable=False,
