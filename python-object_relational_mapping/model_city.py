@@ -32,5 +32,5 @@ class City(Base):
     state_id = Column(
             Integer,
             nullable=False,
-            ForeignKey('states.id')
+            ForeignKey("states.id")
             )
