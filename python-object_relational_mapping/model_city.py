@@ -2,12 +2,10 @@
 """
 Contains the class definition of a City.
 """
-from model_state import Base
-from sqlalchemy import Column, Integer, String, ForeignKey
+from model_state import Base, State
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-
-
-Base = declarative_base()
+from sqlalchemy.schema import ForeignKey
 
 
 class City(Base):
@@ -29,8 +27,8 @@ class City(Base):
             nullable=False,
             )
 
-    states_id = Column(
+    state_id = Column(
             Integer,
-            ForeignKey("states.id")
+            ForeignKey("states.id"),
             nullable=False,
             )
