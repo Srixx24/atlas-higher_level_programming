@@ -18,9 +18,10 @@ def search_states(username, password, database, state_name):
 
         cursor = db.cursor()
 
-        command = "SELECT * FROM states " \
-                "WHERE name='{}' " \
-                "ORDER BY id ASC".format(state_name)
+        command =
+        "SELECT * FROM states " \
+        "WHERE name='{}' " \
+        "ORDER BY id ASC".format(state_name)
         cursor.execute(command)
 
         rows = cursor.fetchall()
