@@ -19,8 +19,8 @@ def list_states(username, password, database, state_name):
         cursor = db.cursor()
 
         command = "SELECT * FROM states " \
-                "WHERE name=%s " \
-                "ORDER BY id ASC"
+            "WHERE name=%s " \
+            "ORDER BY id ASC"
         cursor.execute(command, (state_name,))
 
         rows = cursor.fetchall()
