@@ -4,6 +4,6 @@ if (isNaN(parseInt(square))) {
   console.log('Missing size');
 } else {
   for (let x = 0; square > x; ++x) {
-    console.log('x'.repeat(square));
+    console.log('X'.repeat(square));
   }
 }
