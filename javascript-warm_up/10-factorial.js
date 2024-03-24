@@ -1,12 +1,12 @@
 #!/usr/bin/node
-function factorial(x) {
+function factorial (x) {
   if (isNaN(x)) {
-  return 1;
-} else if (x > 0) {
-  return factorial(x - 1) * x;
-} else {
-  return 1;
-}
+    return 1;
+  } else if (x > 0) {
+    return factorial(x - 1) * x;
+  } else {
+    return 1;
+  }
 }
 
 const intValue = parseInt(process.argv[2]);
