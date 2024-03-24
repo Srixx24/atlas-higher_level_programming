@@ -2,8 +2,8 @@
 function factorial(x) {
   if (isNaN(x)) {
     return 1;
-  } else if (x < 0) {
-    return factorial(x - 1)
+  } else if (x > 0) {
+    return factorial(x - 1);
   } else {
   return 1;
   }
