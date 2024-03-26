@@ -1,7 +1,7 @@
 #!/usr/bin/node
 exports.esrever = function (list) {
-  const R = list.length - 1;
-  const L = 0;
+  let R = list.length - 1;
+  let L = 0;
 
   while (R > L) {
     const temp = list[L];
