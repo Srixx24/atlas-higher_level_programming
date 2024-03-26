@@ -6,7 +6,7 @@ module.exports = class Square extends square6 {
       if (c === undefined){
         boop = 'X';
       }
-      for (const x = 0; this.height > x; ++x) {
+      for (let x = 0; this.height > x; ++x) {
       console.log(boop.repeat(this.width));
       }
     }
