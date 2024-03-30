@@ -4,7 +4,7 @@ const url = `https://swapi-api.hbtn.io/api/films/`;
 const charID = 18;
 request(url, (error, response, body) => {
   if (error) {
-    console.log(error);
+    console.error(error);
   } else {
     const parsResp = JSON.parse(body);
     const filtered = parsResp.results.filter(film =>
