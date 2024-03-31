@@ -9,7 +9,7 @@ request(url, (error, response, body) => {
     const parsResp = JSON.parse(body);
     const filtered = parsResp.results.filter(film =>
       film.characters.includes(`https://swapi-api.hbtn.io/api/people/${charID}/`)
-        );
+    );
     console.log(filtered.length);
   }
 });
